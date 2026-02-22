@@ -49,7 +49,13 @@ h2{
     margin: 15px;
 }
 
-
+img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;   /* makes it round */
+    display: block;
+    margin: 20px auto;    /* center image */
+}
 
 table{
  

@@ -52,9 +52,9 @@ h2{
 img{
     width: 150px;
     height: 150px;
-    border-radius: 50%;   /* makes it round */
+    border-radius: 50%;   
     display: block;
-    margin: 20px auto;    /* center image */
+    margin: 20px auto;  
 }
 
 table{

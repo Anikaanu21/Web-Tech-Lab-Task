@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Calculator</title>
+
+<style>
+
+body {
+font-family: Arial, sans-serif;
+padding: 30px;
+background-color: #c6d2dd;
+text-align: center;
+}
+
+h2 {
+color: #003366;
+}
+
+.calculator {
+background-color: #1b08ae;
+padding: 20px;
+border-radius: 10px;
+width: 260px;
+margin: 0 auto;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#display {
+width: 80%;
+padding: 10px;
+font-size: 18px;
+margin-bottom: 10px;
+text-align: right;
+}
+
+button {
+width: 55px;
+height: 40px;
+margin: 5px;
+border-radius: 5px;
+border: 1px solid #ccc;
+cursor: pointer;
+font-size: 16px;
+}
+
+button:hover {
+background-color: #0055aa;
+color: white;
+}
+
+.clear {
+background-color: red;
+color: rgb(12, 169, 28);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2> Calculator</h2>
+
+<div class="calculator">
+
+<input type="text" id="display">
+<button onclick="press('7')">7</button>
+<button onclick="press('8')">8</button>
+<button onclick="press('9')">9</button>
+<button onclick="press('4')">4</button>
+<button onclick="press('5')">5</button>
+<button onclick="press('6')">6</button>
+<button onclick="press('1')">1</button>
+<button onclick="press('2')">2</button>
+<button onclick="press('3')">3</button>
+<button onclick="press('0')">0</button>
+<button onclick="press('+')">+</button>
+<button onclick="press('-')">-</button>
+<button onclick="press('*')">*</button>
+<button onclick="press('/')">/</button>
+<button onclick="calculate()">=</button>
+<button class="clear" onclick="clearDisplay()">C</button>
+
+</div>
+
+<script>
+
+function press(value)
+{
+document.getElementById("display").value += value;
+}
+
+function calculate()
+{
+var exp = document.getElementById("display").value;
+
+if(exp === "")
+{
+alert("Please enter numbers");
+return;
+}
+
+var result = eval(exp);
+document.getElementById("display").value = result;
+}
+
+function clearDisplay()
+{
+document.getElementById("display").value = "";
+}
+
+</script>
+
+</body>
+
+</html>
